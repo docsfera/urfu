@@ -1,3 +1,4 @@
+let  body  =document.querySelector('body')
 let header = document.querySelector('.header')
 let input = document.querySelector('.input')
 let budget = document.querySelector('#budget')
@@ -30,7 +31,10 @@ const setActive = () => {
 const scrollEvent = () => {
 	if(window.scrollY > lastScroll && window.scrollY !== 0){
 		!header.classList.contains('none') && header.classList.add('none')
-	}else{
+	}else if(window.scrollY == lastScroll){
+		
+	}
+	else{
 		header.classList.contains('none') && header.classList.remove('none')
 	}
 	lastScroll = window.scrollY
