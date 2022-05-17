@@ -29,7 +29,8 @@ const setActive = () => {
 }
 
 const scrollEvent = () => {
-	if(window.scrollY > lastScroll && window.scrollY !== 0){
+
+	if(window.scrollY > lastScroll && window.scrollY !== 0){		
 		!header.classList.contains('none') && header.classList.add('none')
 	}else if(window.scrollY == lastScroll){
 		
