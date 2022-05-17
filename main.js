@@ -29,14 +29,16 @@ const setActive = () => {
 }
 
 const scrollEvent = () => {
-
-	if(window.scrollY > lastScroll && window.scrollY !== 0){		
+	console.log(window.scrollY)
+	if(window.scrollY > lastScroll && window.scrollY !== 0){	
 		!header.classList.contains('none') && header.classList.add('none')
+		body.style.margin = "0px auto 0 auto"
 	}else if(window.scrollY == lastScroll){
 		
 	}
 	else{
 		header.classList.contains('none') && header.classList.remove('none')
+		body.style.margin = "-108px auto 0 auto"
 	}
 	lastScroll = window.scrollY
 }
